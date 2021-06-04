@@ -6,17 +6,13 @@ aliases:
 weight: 30
 ---
 
-{{% notice warning %}}
-This article is machine translated.
-{{% /notice %}}
-
 The page layout determines the structure of a page and divides it into different layout areas. Within these layout areas you can place any number of frontend modules, which are executed one after the other when the page is called and generate the HTML code of the web page. A frontend module is also used to insert the articles, that is, the content.
 
 If a page is not assigned a page layout, it inherits the page layout from a parent page. If no page layout is linked there either, the frontend output is limited to a short "No layoutspecified".
 
 ## Structure of the frontend
 
-In order to be able to convert individual page layouts in the frontend into a neatly arranged and above all cross-browser functional website, a powerful CSS framework is required, which is prepared for all eventualities. The Contao CSS framework fulfills this task very well and is also quite compact. It automatically generates the basic structure of the website based on a page layout, which by default consists of up to three columns and an optional header and footer.
+Converting individual page layouts in the frontend to a neatly arranged, cross-browser functional website, the powerful Contao CSS framework is prepared for all eventualities is also quite compact. It automatically generates the basic structure of the website based on a page layout, which by default consists of up to three columns and an optional header and footer.
 
 ## Header and Footer
 
@@ -52,7 +48,7 @@ By default, the Contao CSS framework defines the following layout areas:
 - Main column
 - Footer
 
-With these five areas, at least 90% of all common page layouts can be easily implemented, so you'll get by with the rule. However, there are some layouts that deviate from this classic division, such as those with an additional area under the header or a two-part main column.
+With these five areas, at least 90% of all common page layouts can be easily implemented. However, there are some layouts that deviate from this classic division, such as those with an additional area under the header or a two-part main column.
 
 To realize such "exotic" page layouts in Contao, you can define additional layout areas in the backend settings and arrange them using a style sheet. Your own layout areas can be used in the page layout just like the standard areas.
 
@@ -60,11 +56,11 @@ To realize such "exotic" page layouts in Contao, you can define additional layou
 
 **Position of the layout areas**: In connection with the standard `fe_page` page template, you can position your own layout areas as follows:
 
-- Before the enclosing element `top`
-- Below the header line `before`
-- In the main column `main`
-- Above the footer `after`
-- After the enclosing element `bottom`
+- Before the wrapper `top`
+- After the page header
+- In the main column
+- Before the page footer
+- After the wrapper `bottom`
 - Manual output `manual`
 
 ## Web Fonts
@@ -107,7 +103,7 @@ With these settings you can define the image size for the lightbox in the page l
 
 Here you define which stylesheets are included in the page layout and in which order.
 
-The components of the Contao **CSS framework**, **internal stylesheets** and **external stylesheets** are available.
+The components of the Contao **CSS framework**, **Internal stylesheets** and **External stylesheets** are available.
 
 **Components of the Contao CSS framework:** Here you can activate the components of the Contao CSS framework.
 
@@ -140,7 +136,8 @@ Feeds embedded in a page layout are linked in the header area of the page and ca
 
 In this section, you assign the frontend modules to the individual layout areas that are to be displayed on the page. The modules of each layout area are arranged one below the other in the order you specify.
 
-![Frontend modules of the Contao Official Demo](/de/layout/theme-manager/images/de/frontend-module-der-contao-official-demo.png?classes=shadow)
+![Frontend modules of the Contao Official Demo](https://user-images.githubusercontent.com/1537395/120654524-ca465700-c44f-11eb-8437-1e6d20a364f1.png)
+
 
 **Integrated modules:** Here you select the modules for the page layout.
 
@@ -172,11 +169,11 @@ $PiwikPath = '//www.example.com/piwik/';
 
 **External JavaScripts:** Here you can add external JS files from the file system.
 
-**Own JavaScript code:** Here you can add your own JavaScript code, which will be displayed at the end of the page.
+**Custom JavaScript code:** Here you can add your own JavaScript code, which will be displayed at the end of the page.
 
 ## jQuery
 
-**Load jQuery:** Add the jQuery library to the layout.
+**Include jQuery:** Add the jQuery library to the layout.
 
 **jQuery templates:** Here you can select one or more jQuery templates.
 
@@ -194,7 +191,7 @@ $PiwikPath = '//www.example.com/piwik/';
 
 ## MooTools
 
-**Load MooTools:** Add the MooTools library to the layout.
+**Include MooTools:** Add the MooTools library to the layout.
 
 **MooTools templates:** Here you can select one or more MooTools templates.
 
@@ -217,7 +214,7 @@ The CSS framework adjusts the page layout to the width of the browser window by 
 
 **Static layout:** Here you define a page layout as static.
 
-**Total width**: Here you can enter the total width of the website.
+**Overall width**: Here you can enter the total width of the website.
 
 **Alignment:** Here you can set the alignment (left-aligned, right-aligned or centered) of the web page.
 
@@ -227,7 +224,7 @@ In the expert settings, you can change the page template that is used for the pa
 
 **Page template:** Here you can select the page template.
 
-**Compress markup:** Here you can determine whether the HTML markup should be compressed before sending it to the browser.
+**Minify the markup:** Here you can determine whether the HTML markup should be compressed before sending it to the browser.
 
 **Viewport tag:** Here you can set an individual viewport tag.
 
@@ -243,4 +240,4 @@ In the expert settings, you can change the page template that is used for the pa
 
 **Body onload:** Some JavaScripts require a so-called "Body Onload Event" to initialize the script when the page is loaded. If you want to use such a JavaScript, you can enter the required code here.
 
-**Additional `<head>` tags:** In the header of your website, the meta information of the page is displayed and the included stylesheets and JavaScript are linked. Here you can add any additions and e.g. insert further stylesheets.
+**Additional `<head>` tags:** In the header of your website, the meta information of the page is displayed and the included stylesheets and JavaScript are linked. Here you can add any additions and insert further stylesheets.
